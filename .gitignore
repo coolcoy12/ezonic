@@ -5,3 +5,5 @@ ezonic.obj
 *tags
 *.code-*
 *.out
+.ninja_log
+out

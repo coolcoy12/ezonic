@@ -1,0 +1,19 @@
+buildDir = out
+sourceDir = source
+
+cc = gcc
+cflags = -ansi -Wpedantic -Os -Iinclude
+ldflags = -s -Wl,--gc-sections
+
+rule cc
+    depfile = $out.dep
+    command = $cc -MD -MF $out.dep -o $out -c $in $cflags
+    description = CC $out
+
+rule link
+    command = $cc -o $out $in $ldflags
+    description = LINK $out
+
+# Building
+build $buildDir/obj/main.obj: cc $sourceDir/main.c
+build $buildDir/ezonic: link $buildDir/obj/main.obj
