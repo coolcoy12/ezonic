@@ -1,0 +1,7 @@
+ezonic
+ezonic.exe
+ezonic.obj
+*.sublime-*
+*tags
+*.code-*
+*.out
