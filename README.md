@@ -12,14 +12,22 @@ Terminal based chat application
 ## Install
 
 ```
-$ easymake release
-# easymake install
+$ make all
+# make install
 ```
 
 ## Usage
 
+### Client
+
 ```
 $ ezonic [OPTS]
+```
+
+### Server
+
+```
+$ ezonic-server [OPTS]
 ```
 
 ## Author
