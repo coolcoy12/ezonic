@@ -13,7 +13,7 @@ Terminal based chat application
 
 ```
 $ easymake release
-$ sudo easymake install
+# easymake install
 ```
 
 ## Usage

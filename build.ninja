@@ -1,5 +1,6 @@
 buildDir = out
-sourceDir = source
+clientDir = client
+serverDir = server
 
 cc = gcc
 cflags = -ansi -Wpedantic -Os -Iinclude
@@ -14,6 +15,10 @@ rule link
     command = $cc -o $out $in $ldflags
     description = LINK $out
 
-# Building
-build $buildDir/obj/main.obj: cc $sourceDir/main.c
-build $buildDir/ezonic: link $buildDir/obj/main.obj
+# Building client
+build $buildDir/obj/client/main.obj: cc $clientDir/main.c
+build $buildDir/ezonic_client: link $buildDir/obj/client/main.obj
+
+# Building server
+# build $buildDir/obj/server/main.obj: cc $serverDir/main.c
+# build $buildDir/ezonic_server: link $buildDir/obj/server/main.obj
