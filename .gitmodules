@@ -1,3 +1,7 @@
-[submodule "include/cutils"]
-	path = include/cutils
+[submodule "client/include/cutils"]
+	path = client/include/cutils
+	url = https://github.com/Fossbay/cutils
+
+[submodule "server/include/cutils"]
+	path = server/include/cutils
 	url = https://github.com/Fossbay/cutils
