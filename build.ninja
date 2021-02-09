@@ -1,0 +1,24 @@
+buildDir = out
+clientDir = client
+serverDir = server
+
+cc = gcc
+cflags = -ansi -Wpedantic -Os -Iinclude
+ldflags = -s -Wl,--gc-sections
+
+rule cc
+    depfile = $out.dep
+    command = $cc -MD -MF $out.dep -o $out -c $in $cflags
+    description = CC $out
+
+rule link
+    command = $cc -o $out $in $ldflags
+    description = LINK $out
+
+# Building client
+build $buildDir/obj/client/main.obj: cc $clientDir/main.c
+build $buildDir/ezonic_client: link $buildDir/obj/client/main.obj
+
+# Building server
+# build $buildDir/obj/server/main.obj: cc $serverDir/main.c
+# build $buildDir/ezonic_server: link $buildDir/obj/server/main.obj
