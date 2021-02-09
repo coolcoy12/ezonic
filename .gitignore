@@ -1,3 +1,5 @@
+.vscode
+
 ezonic
 ezonic.exe
 ezonic.obj
@@ -6,4 +8,7 @@ ezonic.obj
 *.code-*
 *.out
 .ninja_log
-out
+out/client/client.exe
+out/client/client
+out/server/server.exe
+out/server/server
