@@ -9,7 +9,7 @@ serverDir = server
 all: client-bin server-bin
 
 client-bin:
-	gcc $(clientDir)/src/*.c $(cflags) -o $(buildDir)/client/client
+	gcc $(clientDir)/src/*.c $(cflags) -o $(buildDir)/client/ezonic
 
 server-bin:
-	gcc $(serverDir)/src/*.c $(cflags) -o $(buildDir)/server/server
+	gcc $(serverDir)/src/*.c $(cflags) -o $(buildDir)/server/ezonic-server

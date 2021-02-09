@@ -12,3 +12,7 @@ out/client/client.exe
 out/client/client
 out/server/server.exe
 out/server/server
+out/client/ezonic.exe
+out/client/ezonic
+out/server/ezonic-server.exe
+out/server/ezonic-server
