@@ -1,0 +1,20 @@
+{
+	"cc": "gcc",
+	"out": "ezonic",
+	"src": "",
+	"include_dirs": "",
+
+	"#default": "client",
+	
+	// on linux add -lpthread to end of command line
+	"client": [
+		"echo Building client on platform #(os)...",
+		"#(cc) -o #(out) client/src/*.c -Iclient/include -s -Os",
+		"echo Done!"
+	],
+	"server": [
+		"echo Building server on platform #(os)...",
+		"#(cc) -o #(out) server/src/*.c -Iserver/include -s -Os",
+		"echo Done!"
+	],
+}
